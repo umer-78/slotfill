@@ -1,0 +1,58 @@
+{
+ "results": {
+  "rules": {
+   "valid": 0.835,
+   "company": 0.605,
+   "date": 0.97,
+   "address": 0.315,
+   "total": 0.69,
+   "all_fields": 0.13,
+   "p95_ms": 0.19983505135314772,
+   "cost_per_1000": 3.233335241191071e-06
+  },
+  "trained (100 receipts)": {
+   "valid": 0.985,
+   "company": 0.635,
+   "date": 0.98,
+   "address": 0.59,
+   "total": 0.86,
+   "all_fields": 0.355,
+   "p95_ms": 5.123312999239708,
+   "cost_per_1000": 7.214118096183407e-05
+  },
+  "trained (200 receipts)": {
+   "valid": 0.985,
+   "company": 0.63,
+   "date": 0.98,
+   "address": 0.665,
+   "total": 0.905,
+   "all_fields": 0.41,
+   "p95_ms": 3.344357301466516,
+   "cost_per_1000": 6.048431370354971e-05
+  },
+  "trained (426 receipts)": {
+   "valid": 0.985,
+   "company": 0.64,
+   "date": 0.98,
+   "address": 0.675,
+   "total": 0.94,
+   "all_fields": 0.44,
+   "p95_ms": 3.790206952180595,
+   "cost_per_1000": 6.73965272532276e-05
+  },
+  "trained, no position features (426)": {
+   "valid": 0.98,
+   "company": 0.625,
+   "date": 0.98,
+   "address": 0.62,
+   "total": 0.94,
+   "all_fields": 0.41,
+   "p95_ms": 3.927443999418754,
+   "cost_per_1000": 6.913275683569964e-05
+  }
+ },
+ "ocr_ceiling": {
+  "company": 0.735,
+  "address": 0.805
+ }
+}
