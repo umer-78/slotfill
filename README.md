@@ -1,5 +1,7 @@
 # slotfill
 
+[![CI](https://github.com/umer-78/slotfill/actions/workflows/ci.yml/badge.svg)](https://github.com/umer-78/slotfill/actions/workflows/ci.yml)
+
 [![Slotfill: the live demo](.github/preview.jpg)](https://umer-78.github.io/slotfill/)
 
 **Live demo:** https://umer-78.github.io/slotfill/ (rules against the trained extractor field by field, and the schema's parsers to try)
@@ -54,3 +56,7 @@ python -m slotfill.demo    # rebuild the live demo's data in docs/
 ```
 
 SROIE is downloaded on first use into `~/.cache/slotfill`; nothing is committed.
+
+## Licence
+
+MIT licence (see [LICENSE](LICENSE)). The data it evaluates (the ICDAR 2019 SROIE receipts) keeps its own licence and is downloaded when you run it.
