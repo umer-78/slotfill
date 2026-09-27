@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Slotfill · Umer Hashmi</title>
+  <meta name="description" content="Structured extraction from scanned receipts into a strict schema: rules against a trained extractor, field by field, with the OCR ceiling.">
+  <link rel="stylesheet" href="kit.css">
+  <style>:root { --accent: #0f766e; --on-accent: #fff; } @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --accent: #5eead4; --on-accent: #0f0e0c; } }</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <a class="crumb" href="https://umer-78.github.io/">← All projects</a>
+      <h1>Slotfill</h1>
+      <p class="lede">Turning a scanned receipt into a record means filling four slots (shop, address, date, total) with values that pass a strict schema: a real calendar date, a positive amount with two decimals. Here hand-written rules and a small trained extractor over OCR lines, with their positions on the page, are compared on 200 held-out receipts, against the ceiling of what the OCR text allows.</p>
+      <div class="links"><a class="btn primary" href="#parsers">Try the parsers</a><a class="btn" href="https://github.com/umer-78/slotfill">Code and method</a></div>
+    </header>
+    <main>
+      <section class="kpis" id="kpis"></section>
+      <section class="card">
+        <h2>Field by field</h2>
+        <p class="sub">Share of the 200 held-out receipts where the extracted value matches the label (case, spacing and punctuation aside; dates and totals compared as values). The dashed line is the OCR ceiling: how often any run of OCR lines matches the label exactly.</p>
+        <div class="controls"><label>Field</label><div id="field"></div></div>
+        <div id="bars"></div>
+        <p class="small muted" id="ceiling"></p>
+      </section>
+      <div class="grid2">
+        <section class="card"><h2>More training receipts</h2><p class="sub">The trained extractor with 100, 200 and all 426 training receipts.</p><div id="curve"></div><div id="curveKey"></div></section>
+        <section class="card"><h2>Speed and cost</h2><p class="sub">p95 latency per receipt and compute cost per 1,000 on one CPU core, OCR aside.</p><div id="cost"></div></section>
+      </div>
+      <section class="card" id="parsers">
+        <h2>Try the parsers</h2>
+        <p class="sub">The schema's date and amount parsers, the same rules as <code>slotfill/schema.py</code>, running in your browser. Type a line the way a receipt prints it.</p>
+        <form class="controls" id="pform" autocomplete="off"><input id="line" class="text" aria-label="Receipt line" value="DATE: 05/03/2018 TOTAL RM 1,234.50"></form>
+        <div class="readout" id="parsed"></div>
+        <div class="controls small" id="tries"></div>
+      </section>
+    </main>
+    <footer>Built by <a href="https://github.com/umer-78">Umer Hashmi</a> · Receipts from the ICDAR 2019 SROIE dataset, downloaded at run time; this page holds only the bench's aggregate numbers</footer>
+  </div>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

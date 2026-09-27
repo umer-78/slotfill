@@ -1,5 +1,7 @@
 # slotfill
 
+**Live demo:** https://umer-78.github.io/slotfill/ (rules against the trained extractor field by field, and the schema's parsers to try)
+
 Can a small trained model hold a strict extraction schema at a fraction of a frontier model's cost?
 
 The spec's documents are freight invoices, which are private. The closest public stand-in is SROIE (ICDAR 2019): 626 real scanned receipts from hundreds of shops, each with its OCR'd text and labelled company, date, address and total. It is the same job: a fixed schema out of noisy, varied layouts.
@@ -46,6 +48,7 @@ The OCR ceiling is how often *any* extractor reading this OCR could get a field 
 pip install -e '.[dev]'
 pytest -q
 python -m slotfill bench
+python -m slotfill.demo    # rebuild the live demo's data in docs/
 ```
 
 SROIE is downloaded on first use into `~/.cache/slotfill`; nothing is committed.
