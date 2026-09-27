@@ -1,5 +1,7 @@
 # slotfill
 
+[![Slotfill: the live demo](.github/preview.jpg)](https://umer-78.github.io/slotfill/)
+
 **Live demo:** https://umer-78.github.io/slotfill/ (rules against the trained extractor field by field, and the schema's parsers to try)
 
 Can a small trained model hold a strict extraction schema at a fraction of a frontier model's cost?
